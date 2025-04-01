@@ -9,6 +9,7 @@ import { kv } from "@vercel/kv"
 export async function adminLogin(formData: FormData) {
   const password = formData.get("password") as string
   const adminPassword = process.env.ADMIN_PASSWORD
+  const cookiesList = await cookies();
 
   if (!password || password !== adminPassword) {
     return { success: false, message: "Invalid password" }
@@ -16,20 +17,24 @@ export async function adminLogin(formData: FormData) {
 
   // Set an admin session cookie (expires in 24 hours)
   const expires = new Date(Date.now() + 24 * 60 * 60 * 1000)
-  cookies().set("admin_session", "true", { expires, httpOnly: true })
-
+  //cookies().set("admin_session", "true", { expires, httpOnly: true })
+  cookiesList.set("admin_session", "true", { expires, httpOnly: true })
   return { success: true }
 }
 
 // Check if admin is logged in
 export async function checkAdminAuth() {
-  const session = cookies().get("admin_session")
+  const cookiesList = await cookies()
+  //const session = cookies().get("admin_session")
+  const session = cookiesList.get("admin_session")
   return !!session?.value
 }
 
 // Admin logout
 export async function adminLogout() {
-  cookies().delete("admin_session")
+  const cookiesList = await cookies();
+  //cookies().delete("admin_session")
+  cookiesList.delete("admin_session")
   redirect("/admin")
 }
 

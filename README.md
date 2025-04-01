@@ -24,6 +24,9 @@ web application that uses gemini-2.0-flash-exp to generate personalized alphabet
 
 This application leverages Vercel Blob Storage, an S3-compatible object storage solution optimized for serverless environments, to efficiently store and serve image assets for the storybooks. The Blob Storage provides a scalable way to handle binary data without managing infrastructure, similar to how AWS S3 works but seamlessly integrated with the Vercel platform. Additionally, the application utilizes Vercel KV (Key-Value) Storage, a Redis-compatible serverless database, to store story metadata, user preferences, and application state, enabling fast data retrieval with minimal latency while maintaining a completely serverless architecture.
 
+The Admin page provides a secure dashboard for managing the AI Storybook Creator application. Protected by password authentication, it offers comprehensive story management capabilities including viewing, deleting, and modifying visibility settings for all stories (including unlisted ones). Administrators can adjust application settings such as the number of alphabet letters used in story generation and toggle whether new story submissions are allowed during high-demand periods. The dashboard also features a manual cleanup function to handle timed-out story generations and displays detailed metadata for each story. This centralized control panel ensures efficient content moderation and application management without requiring direct database access.
+
+
 ## Local 환경 개발
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

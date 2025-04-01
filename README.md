@@ -2,7 +2,7 @@
 
 ## 시작하기
 
-.env.local.example 을 .env.local 로 copy 하고 OPENAI_API_KEY, ANTHROPIC_API_KEY 값을 세팅해야 합니다.
+.env.local.example 을 .env.local 로 copy
 
 ```bash
 cp .env.local.example .env.local

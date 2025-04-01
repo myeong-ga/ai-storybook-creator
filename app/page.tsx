@@ -73,7 +73,7 @@ export default async function Home() {
         <div className="absolute inset-0">
           <div
             className="absolute inset-0 bg-cover bg-bottom"
-            style={{ backgroundImage: 'url("/images/hero-background.png")' }}
+            style={{ backgroundImage: 'url("/images/hero-background2.png")' }}
           ></div>
         </div>
 

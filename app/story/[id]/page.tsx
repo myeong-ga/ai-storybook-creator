@@ -11,7 +11,11 @@ import { VisibilityToggle } from "./visibility-toggle"
 import { checkAdminAuth } from "@/app/admin/actions"
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
-  const storyData = await getStory(params.id)
+  
+  //const storyData = await getStory(params.id)
+  // Next.js 15 Dynamic APIs are Asynchronous. https://nextjs.org/docs/messages/sync-dynamic-apis
+  const { id } = await params
+  const storyData = await getStory(id)
 
   if (!storyData) {
     return {

@@ -16,12 +16,14 @@ pnpm dev
 
 ```
 
-## 프로젝트 소개.
+## 프로젝트 소개
 
 gemini-2.0-flash-exp 이용 TEXT, IMAGE 질의.
 
 web application that uses gemini-2.0-flash-exp to generate personalized alphabet storybooks for children, complete with illustrations that can be read and shared.
 
+
+## Local 환경 개발
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.

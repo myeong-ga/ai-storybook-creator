@@ -1,22 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+## 시작하기
+
+.env.local.example 을 .env.local 로 copy 하고 OPENAI_API_KEY, ANTHROPIC_API_KEY 값을 세팅해야 합니다.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cp .env.local.example .env.local
 ```
+
+gemini-2.0-flash-exp 모델을 사용하려면  GOOGLE_GENERATIVE_AI_API_KEY 가 정의되어야 합니다.
+
+```bash
+pnpm install
+pnpm dev
+
+```
+
+## 프로젝트 소개.
+
+gemini-2.0-flash-exp 이용 TEXT, IMAGE 질의.
+
+web application that uses gemini-2.0-flash-exp to generate personalized alphabet storybooks for children, complete with illustrations that can be read and shared.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+
+
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 

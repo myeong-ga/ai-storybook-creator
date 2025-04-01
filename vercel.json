@@ -1,0 +1,9 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/cleanup?cronSecret=$CRON_SECRET",
+      "schedule": "0 0 * * *"
+    }
+  ]
+}
+
